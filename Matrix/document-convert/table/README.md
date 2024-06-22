@@ -58,6 +58,8 @@ The following takes the Chinese table recognition model as an example to introdu
 Use the following commands to quickly complete the identification of a table.
 
 ```python
+git clone https://github.com/PaddlePaddle/PaddleOCR.git
+
 cd PaddleOCR/ppstructure
 
 # download model
@@ -125,6 +127,8 @@ python3 table/eval_table.py \
 Evaluate on the PubLatNet dataset using the English model
 
 ```bash
+git clone https://github.com/PaddlePaddle/PaddleOCR.git
+
 cd PaddleOCR/ppstructure
 # Download the model
 mkdir inference && cd inference

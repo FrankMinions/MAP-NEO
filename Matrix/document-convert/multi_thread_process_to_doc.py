@@ -149,7 +149,7 @@ def load_model(layout_path, num_class, det_path, rec_path, rec_bs, formula_path,
     Match = TableMatch(filter_ocr_result=True)
 
     global Analyzer
-    Analyzer = Latex2Text(formula_config = {'model_fp': formula_path}, analyzer_config=dict(model_name='mfd', model_type='yolov7', model_fp=anay_path), device = 'gpu')
+    Analyzer = Latex2Text(formula_config={'model_fp': formula_path}, analyzer_config=dict(model_name='mfd', model_type='yolov7', model_fp=anay_path), device = 'gpu')
 
 
 def text_system(img, thre = 0.5):
@@ -159,8 +159,11 @@ def text_system(img, thre = 0.5):
     rec = []
     for i in range(len(result.rec_scores)):
         if result.rec_scores[i] > thre:
-            bbox.append(np.reshape(result.boxes[i], (4, 2)))
-            rec.append((result.text[i],result.rec_scores[i]))
+            try:
+                bbox.append(np.reshape(result.boxes[i], (4, 2)))
+                rec.append((result.text[i], result.rec_scores[i]))
+            except Exception as e:
+                print(e)
     return bbox, rec, time.time() - time1
 
 def expand(pix, det_box, shape):

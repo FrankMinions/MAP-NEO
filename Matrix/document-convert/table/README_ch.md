@@ -63,6 +63,8 @@ PP-Structure目前提供了中英文两种语言的表格识别模型，模型�
 
 使用如下命令即可快速完成一张表格的识别。
 ```python
+git clone https://github.com/PaddlePaddle/PaddleOCR.git
+
 cd PaddleOCR/ppstructure
 
 # 下载模型
@@ -113,6 +115,8 @@ python3 ppstructure/table/convert_label2html.py --ori_gt_path /path/to/your_labe
 
 准备完成后使用如下命令进行评估，评估完成后会输出teds指标。
 ```python
+git clone https://github.com/PaddlePaddle/PaddleOCR.git
+
 cd PaddleOCR/ppstructure
 python3 table/eval_table.py \
     --det_model_dir=path/to/det_model_dir \
@@ -129,6 +133,8 @@ python3 table/eval_table.py \
 如使用英文表格识别模型在PubLatNet数据集上进行评估
 
 ```bash
+git clone https://github.com/PaddlePaddle/PaddleOCR.git
+
 cd PaddleOCR/ppstructure
 # 下载模型
 mkdir inference && cd inference

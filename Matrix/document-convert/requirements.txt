@@ -1,5 +1,8 @@
 beautifulsoup4
+cnstd==1.2.4.1
+imgaug==0.4.0
 lxml
+matplotlib==3.5.3
 numpy>=1.19.5
 onnxruntime
 onnxruntime_gpu
@@ -16,6 +19,8 @@ python_docx==0.8.11
 PyYAML>=5.4.1
 scipy
 Shapely
+scikit-image==0.19.3
+seaborn==0.12.2
 
 # please also do the following
 # python -m pip install fastdeploy-gpu-python -f https://www.paddlepaddle.org.cn/whl/fastdeploy.html
@@ -23,7 +28,6 @@ Shapely
 # for latex
 tqdm>=4.47.0
 munch>=2.5.0
-torch>=1.7.1
 requests>=2.22.0
 einops>=0.3.0
 x_transformers==0.15.0

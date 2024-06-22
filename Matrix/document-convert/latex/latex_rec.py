@@ -21,7 +21,7 @@ from functools import cmp_to_key
 from cnstd.utils import get_model_file
 from cnstd import LayoutAnalyzer
 from cnstd.yolov7.consts import CATEGORY_DICT
-from cnstd.yolov7.general import xyxy24p, box_partial_overlap
+from cnstd.yolov7.general import box_partial_overlap
 
 def data_dir_default():
     """
