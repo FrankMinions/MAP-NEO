@@ -38,5 +38,4 @@ timm==0.5.4
 albumentations>=0.5.2
 pyreadline3>=3.4.1
 wenxin-api
-cnstd
 dashscope
